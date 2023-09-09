@@ -6,20 +6,6 @@
 // const { setPrompt } = require("readline-sync")
 
 
-
-//  let arrayvazio = []
-
-//  let numeros = [ 72, 72, 81, 80,90]
-
-//  let nomes = ['flavio', 'flavio', 'clenio']
-
-//  let tipodiverso = [ 72,'clenio', 'maria', true]
-
-//  console.log(numeros[2])
-//  console.log(nomes[2])   
-//  console.log(tipodiverso[2])
-
-
 // var listaelementos = []
 
 // listaelementos[1] = 'banana'
