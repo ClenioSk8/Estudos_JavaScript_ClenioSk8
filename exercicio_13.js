@@ -29,7 +29,7 @@ while (!votacaoFinalizada) {
     console.log("Entrada inválida. Vote novamente.");
   }
 
-  const finalizar = prompt("Deseja finalizar a votação? (S para sim, qualquer outra tecla para continuar)");
+  const finalizar = prompt("Deseja finalizar a votação? (S para sim, Qualquer outra tecla para continuar)");
   if (finalizar.toUpperCase() === "S") {
     votacaoFinalizada = true;
   }
