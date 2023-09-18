@@ -597,3 +597,111 @@
 //         return this.saldo            
 //     }
 // }     
+
+
+// class Produto {
+//     constructor(nome, preco, quantidade, valor){
+//         this.nome = nome
+//         this.preco = preco
+//         this.quantidade = quantidade
+//         this.valor = valor
+//     }
+//     getPreco(){
+//         return this.preco
+//     }
+//     getNome(){
+//         return this.nome
+//     }
+//     getQuantida(){
+//         return this.quantidade
+//     }
+
+//     hetValor(){
+//         return this.valor
+//     }
+
+// }
+
+// const tabela = new Produto('mesa',200,2,5)
+// console.log(`${tabela.nome}`)
+// console.log(`${tabela.quantidade}`)
+// console.log(`${tabela.valor}`)
+// console.log(`${tabela.preco}`)
+
+
+// Defina uma classe Animal
+class Animal {
+    constructor(nome, especie, cor) {
+      this.nome = nome;
+      this.especie = especie;
+      this.cor = cor
+    }
+  }
+  
+  // Adicione um atributo comum a todos os objetos de Animal
+  Animal.prototype.idade = 0;
+  
+  // Crie alguns objetos de Animal
+  const animal1 = new Animal("Fido", "Cachorro");
+  const animal2 = new Animal("Whiskers", "Gato");
+  const animal3 = new Animal('cleno','humano','rosa')
+  // Defina a idade para cada animal
+  animal1.idade = 3;
+  animal2.idade = 5;
+  animal3.idade - 34  
+  // Acesse os atributos dos animais
+  console.log(`${animal1.nome} é um ${animal1.especie} e tem ${animal1.idade} anos de idade.`);
+  console.log(`${animal2.nome} é um ${animal2.especie} e tem ${animal2.idade} anos de idade.`);
+  console.log(`${animal3.nome}  ${animal3.especie}  ${animal3.cor}`)
+
+
+
+//   // Classe base para animais
+// class Animal {
+//     constructor(nome, especie) {
+//       this.nome = nome;
+//       this.especie = especie;
+//       this.idade = 0; // Atributo comum a todos os animais
+//       this.altura = 0      
+//     }
+//   }
+  
+//   // Classe para Cachorro, estendendo a classe Animal
+//   class Cachorro extends Animal {
+//     constructor(nome) {
+//       super(nome, "Cachorro");
+//     }
+  
+//     // Métodos específicos para Cachorro, se necessário
+//   }
+  
+
+//   // teste
+//   class Pessoas extends Animal{
+//     constructor(altura){
+//       super(altura, 1.75)
+//     }
+//   }
+
+//   // Classe para Gato, estendendo a classe Animal
+//   class Gato extends Animal {
+//     constructor(nome) {
+//       super(nome, "Gato");
+//     }
+  
+//     // Métodos específicos para Gato, se necessário
+//   }
+  
+//   // Crie objetos de Cachorro e Gato e pessoas
+//   const cachorro1 = new Cachorro("Fido");
+//   const gato1 = new Gato("Whiskers");
+//   const pessoa1 = new Pessoas(1.90)  
+
+//   // Defina a idade para cada animal
+//   cachorro1.idade = 3;
+//   gato1.idade = 5;
+//   pessoa1.idade = 12;
+  
+//   // Acesse os atributos dos animais
+//   console.log(`${cachorro1.nome} é um ${cachorro1.especie} e tem ${cachorro1.idade} anos de idade.`);
+//   console.log(`${gato1.nome} é um ${gato1.especie} e tem ${gato1.idade} anos de idade e ${pessoa1.altura}`);
