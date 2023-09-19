@@ -8,23 +8,26 @@ class Investidor {
         this.aporteMensalRendaFixa = 0;
         this.aporteMensalRendaVariavel = 0;
         this.taxaSelic = 13.25; // Taxa Selic atual (5% ao ano)
-        this.tempoInvestimento = 10; // Tempo de investimento em anos
+        this.tempoInvestimento = 0; // Tempo de investimento em anos
     }
 
     capturarDadosUsuario() {
         this.nomeUsuario = prompt(`Digite seu nome: `);
-        this.nomeUsuario = this.nomeUsuario.charAt(0).toLocaleUpperCase()+this.nomeUsuario.slice(1)
-        this.idadeUsuario = parseInt(prompt(`${this.nomeUsuario}, digite sua idade: `));
-        this.rendaMensal = parseFloat(prompt(`${this.nomeUsuario}, digite sua renda mensal: `));
-        this.profissao = prompt(`${this.nomeUsuario}, digite sua profissão: `);
-        this.formacao = prompt(`${this.nomeUsuario}, digite sua formação acadêmica: `);
+        // this.idadeUsuario = parseInt(prompt(`${this.nomeUsuario}, digite iuuuiuiusua idade: `));
+        // this.rendaMensal = parseFloat(prompt(`${this.nomeUsuario}, digite sua renda mensal: `));
+        // this.profissao = prompt(`${this.nomeUsuario}, digite sua profissão: `);
+        // this.formacao = prompt(`${this.nomeUsuario}, digite sua formação acadêmica: `);
         this.aporteMensalRendaFixa = parseFloat(prompt(`${this.nomeUsuario}, digite o valor investindo mensalmente em renda fixa: `));
-        this.aporteMensalRendaVariavel = parseFloat(prompt(`${this.nomeUsuario}, digite o valor investindo mensalmente em renda variável: `));
+        this.tempoInvestimento = parseInt(prompt(' quanto tempo pretende investir ? '))
+        // this.aporteMensalRendaVariavel = parseFloat(prompt(`${this.nomeUsuario}, digite o valor investindo mensalmente em renda variável: `));
     }
 
     calcularRentabilidade() {
-        const rentabilidadeRendaFixa = this.aporteMensalRendaFixa * Math.pow(1 + this.taxaSelic, this.tempoInvestimento) - this.aporteMensalRendaFixa;
-        const rentabilidadeRendaVariavel = this.aporteMensalRendaVariavel * Math.pow(1 + this.taxaSelic, this.tempoInvestimento) - this.aporteMensalRendaVariavel;
+
+        const total_investido = (this.tempoInvestimento*this.aporteMensalRendaFixa.toFixed(2))
+        const total_rentabilidade =(this.aporteMensalRendaFixa*this.tempoInvestimento)/100*13.25
+        const acumulado_final = total_investido+total_rentabilidade
+       
 
         return {
             nomeUsuario: this.nomeUsuario,
@@ -34,8 +37,10 @@ class Investidor {
             formacao: this.formacao,
             aporteMensalRendaFixa: this.aporteMensalRendaFixa,
             aporteMensalRendaVariavel: this.aporteMensalRendaVariavel,
-            rentabilidadeRendaFixa: rentabilidadeRendaFixa.toFixed(2),
-            rentabilidadeRendaVariavel: rentabilidadeRendaVariavel.toFixed(2)
+            total_investido,
+            total_rentabilidade,
+            acumulado_final,
+            acumulado_finaly,
 
         };
     }
