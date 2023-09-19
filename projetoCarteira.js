@@ -24,10 +24,15 @@ class Investidor {
 
     calcularRentabilidade() {
 
-        const total_investido = (this.tempoInvestimento*this.aporteMensalRendaFixa.toFixed(2))
-        const total_rentabilidade =(this.aporteMensalRendaFixa*this.tempoInvestimento)/100*13.25
-        const acumulado_final = total_investido+total_rentabilidade
-       
+        const total_investido = (this.tempoInvestimento * this.aporteMensalRendaFixa.toFixed(2))
+        const total_rentabilidade = (this.aporteMensalRendaFixa * this.tempoInvestimento) / 100 * 13.25
+        const acumulado_final = total_investido + total_rentabilidade
+        if(acumulado_final > 10000){
+            console.log(acumulado_final-5000)
+           
+        }
+
+
 
         return {
             nomeUsuario: this.nomeUsuario,
@@ -40,7 +45,9 @@ class Investidor {
             total_investido,
             total_rentabilidade,
             acumulado_final,
-            acumulado_finaly,
+
+           
+
 
         };
     }
@@ -49,11 +56,12 @@ class Investidor {
         const infoInvestimentos = this.calcularRentabilidade();
         console.log("Informações do Investidor:");
         console.log(infoInvestimentos);
+           
     }
 }
-    // Criar um objeto Investidor e capturar os dados do usuário
-    const investidor = new Investidor();
-    investidor.capturarDadosUsuario();
-   
-    // Calcular e imprimir as informações de rentabilidade
-    investidor.imprimirInformacoes();
+// Criar um objeto Investidor e capturar os dados do usuário
+const investidor = new Investidor();
+investidor.capturarDadosUsuario();
+
+// Calcular e imprimir as informações de rentabilidade
+investidor.imprimirInformacoes();
