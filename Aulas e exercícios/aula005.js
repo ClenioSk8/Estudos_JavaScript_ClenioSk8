@@ -630,29 +630,29 @@
 
 
 // Defina uma classe Animal
-class Animal {
-    constructor(nome, especie, cor) {
-      this.nome = nome;
-      this.especie = especie;
-      this.cor = cor
-    }
-  }
+// class Animal {
+//     constructor(nome, especie, cor) {
+//       this.nome = nome;
+//       this.especie = especie;
+//       this.cor = cor
+//     }
+//   }
   
-  // Adicione um atributo comum a todos os objetos de Animal
-  Animal.prototype.idade = 0;
+//   // Adicione um atributo comum a todos os objetos de Animal
+//   Animal.prototype.idade = 0;
   
-  // Crie alguns objetos de Animal
-  const animal1 = new Animal("Fido", "Cachorro");
-  const animal2 = new Animal("Whiskers", "Gato");
-  const animal3 = new Animal('cleno','humano','rosa')
-  // Defina a idade para cada animal
-  animal1.idade = 3;
-  animal2.idade = 5;
-  animal3.idade - 34  
-  // Acesse os atributos dos animais
-  console.log(`${animal1.nome} é um ${animal1.especie} e tem ${animal1.idade} anos de idade.`);
-  console.log(`${animal2.nome} é um ${animal2.especie} e tem ${animal2.idade} anos de idade.`);
-  console.log(`${animal3.nome}  ${animal3.especie}  ${animal3.cor}`)
+//   // Crie alguns objetos de Animal
+//   const animal1 = new Animal("Fido", "Cachorro");
+//   const animal2 = new Animal("Whiskers", "Gato");
+//   const animal3 = new Animal('cleno','humano','rosa')
+//   // Defina a idade para cada animal
+//   animal1.idade = 3;
+//   animal2.idade = 5;
+//   animal3.idade - 34  
+//   // Acesse os atributos dos animais
+//   console.log(`${animal1.nome} é um ${animal1.especie} e tem ${animal1.idade} anos de idade.`);
+//   console.log(`${animal2.nome} é um ${animal2.especie} e tem ${animal2.idade} anos de idade.`);
+//   console.log(`${animal3.nome}  ${animal3.especie}  ${animal3.cor}`)
 
 
 
@@ -705,3 +705,9 @@ class Animal {
 //   // Acesse os atributos dos animais
 //   console.log(`${cachorro1.nome} é um ${cachorro1.especie} e tem ${cachorro1.idade} anos de idade.`);
 //   console.log(`${gato1.nome} é um ${gato1.especie} e tem ${gato1.idade} anos de idade e ${pessoa1.altura}`);
+
+
+var numero = 42;
+var texto = "O número é: " + numero; // Número é convertido automaticamente para string
+console.log(texto)
+console.log(typeof(texto))
