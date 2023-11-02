@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aula de lógica</title>
+    <title>Consulta de CEP</title>
 </head>
 <body>
-    
+    <h1>Consulta de CEP</h1>
+    <input type="text" id="cepInput" placeholder="Digite o CEP">
+    <button onclick="consultarCEP()">Consultar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function consultarCEP() {
+            const cep = document.getElementById('cepInput').value;
+            const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.erro) {
+                        document.getElementById('resultado').textContent = 'CEP não encontrado.';
+                    } else {
+                        const resultado = `
+                            <strong>CEP:</strong> ${data.cep}<br>
+                            <strong>Logradouro:</strong> ${data.logradouro}<br>
+                            <strong>Bairro:</strong> ${data.bairro}<br>
+                            <strong>Cidade/UF:</strong> ${data.localidade}/${data.uf}
+                        `;
+                        document.getElementById('resultado').innerHTML = resultado;
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao consultar CEP:', error);
+                    document.getElementById('resultado').textContent = 'Erro na consulta de CEP.';
+                });
+        }
+    </script>
 </body>
-<script src="exercicio_19.js"></script>
 </html>

@@ -59,3 +59,6 @@ document.write("Candidato Y: " + votosCandidatoY + " votos <br>");
 document.write("Candidato Z: " + votosCandidatoZ + " votos <br>");
 document.write("Votos em branco/nulos: " + votosBrancoNulo + " votos <br>");
 document.write("O vencedor é: " + vencedor + " com " + maiorNumeroDeVotos + " votos. <br>");
+
+
+glkjhdfgldfhgdfhgklinbvhhnghfngfhngf
